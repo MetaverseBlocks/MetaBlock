@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public GameObject menuset;
+    
+
     public void ChangeSceneBtn()
     {
         switch (this.gameObject.name)
@@ -16,15 +17,9 @@ public class ChangeScene : MonoBehaviour
             case "게임설명":
                 SceneManager.LoadScene("howtoplay");
                 break;
-            
+           
         }
     }
-    private void Update()
-    {
-        if (Input.GetButton("exitbtn"))
-        {
-            menuset.SetActive(true);
-        }
-    }
+  
 }
 

@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class HowtoPlay : MonoBehaviour
 {
+
   public void ChangeSceneBtn()
     {
+       
+
         switch (this.gameObject.name)
         {
             case "beforebtn":
@@ -15,6 +18,7 @@ public class HowtoPlay : MonoBehaviour
             case "startbtn":
                 SceneManager.LoadScene("SampleScene");
                 break;
+         
         }
     }
 }
