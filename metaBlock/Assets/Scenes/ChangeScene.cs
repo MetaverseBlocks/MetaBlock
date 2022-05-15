@@ -17,6 +17,9 @@ public class ChangeScene : MonoBehaviour
             case "게임설명":
                 SceneManager.LoadScene("howtoplay");
                 break;
+            case "이전버튼":
+                SceneManager.LoadScene("MainMenu");
+                break;
            
         }
     }
