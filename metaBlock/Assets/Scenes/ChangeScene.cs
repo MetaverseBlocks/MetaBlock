@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     
-
+   
     public void ChangeSceneBtn()
     {
         switch (this.gameObject.name)
