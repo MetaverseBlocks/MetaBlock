@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MoveObject : MonoBehaviour
 {
+   
     public Button btn1, btn2, btn3, btn4, upbtn, downbtn;
     //1=À§, 2=¾Æ·¡, 3=¿Þ, 4= ¿À
     /*
@@ -54,5 +55,9 @@ public class MoveObject : MonoBehaviour
     {
         this.transform.Translate(0.0f, -0.01f, 0.0f);
     }
+     
+  
 
+   
+    
 }

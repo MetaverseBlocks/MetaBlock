@@ -11,7 +11,7 @@ public class ChangeScene : MonoBehaviour
     {
         switch (this.gameObject.name)
         {
-            case "자유모드":
+            case "게임시작":
                 SceneManager.LoadScene("SampleScene");
                 break;
             case "게임설명":
