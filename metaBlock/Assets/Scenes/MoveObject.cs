@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class MoveObject : MonoBehaviour
 {
-   
-    public Button btn1, btn2, btn3, btn4, upbtn, downbtn;
+    
+    public Button btn1, btn2, btn3, btn4,upbtn, downbtn;
+
     //1=위, 2=아래, 3=왼, 4= 오
     /*
     public float speed = 30f;
@@ -21,43 +22,46 @@ public class MoveObject : MonoBehaviour
           transform.Rotate(lr * h * speed);
         */
         
-        btn1.onClick.AddListener(btN1);
-        btn2.onClick.AddListener(btN2);
-        btn3.onClick.AddListener(btN3);
-        btn4.onClick.AddListener(btN4);
+     
         upbtn.onClick.AddListener(upBtn);
         downbtn.onClick.AddListener(downBtn);
+        btn1.onClick.AddListener(Btn1);
+        btn2.onClick.AddListener(Btn2);
+        btn3.onClick.AddListener(Btn3);
+        btn4.onClick.AddListener(Btn4);
 
     }
-    void btN1()
-    {
-        this.transform.Translate(0.0f, 0.0f, 0.01f);
-    }
-    void btN2()
-    {
-        this.transform.Translate(0.0f, 0.0f, -0.01f);
 
-    }
-    void btN3()
-    {
-        this.transform.Translate(-0.01f, 0.0f, 0.0f);
-    }
-    void btN4()
-    {
-        this.transform.Translate(0.01f, 0.0f, 0.0f);
-
-    }
     void upBtn()
     {
+        print("출력1");
         this.transform.Translate(0.0f, 0.01f, 0.0f);
+        print("출력2");
     }
     void downBtn()
     {
         this.transform.Translate(0.0f, -0.01f, 0.0f);
     }
-     
-  
+    void Btn1()
+    {
+        this.transform.Translate(0.0f, 0.0f, 0.01f);
+    }
+    void Btn2()
+    {
+        this.transform.Translate(0.0f, 0.0f, -0.01f);
+    }
+    void Btn3()
+    {
+        this.transform.Translate(-0.01f, 0.0f, 0.0f);
 
-   
-    
+    }
+    void Btn4()
+    {
+        this.transform.Translate(0.01f, 0.0f, 0.0f);
+    }
+
+
+
+
+
 }
