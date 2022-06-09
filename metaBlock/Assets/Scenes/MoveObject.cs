@@ -35,29 +35,29 @@ public class MoveObject : MonoBehaviour
     void upBtn()
     {
         print("출력1");
-        this.transform.Translate(0.0f, 0.01f, 0.0f);
+        this.transform.Translate(0.0f, 0.0005f, 0.0f);
         print("출력2");
     }
     void downBtn()
     {
-        this.transform.Translate(0.0f, -0.01f, 0.0f);
+        this.transform.Translate(0.0f, -0.0005f, 0.0f);
     }
     void Btn1()
     {
-        this.transform.Translate(0.0f, 0.0f, 0.01f);
+        this.transform.Translate(0.0f, 0.0f, 0.0005f);
     }
     void Btn2()
     {
-        this.transform.Translate(0.0f, 0.0f, -0.01f);
+        this.transform.Translate(0.0f, 0.0f, -0.0005f);
     }
     void Btn3()
     {
-        this.transform.Translate(-0.01f, 0.0f, 0.0f);
+        this.transform.Translate(-0.0005f, 0.0f, 0.0f);
 
     }
     void Btn4()
     {
-        this.transform.Translate(0.01f, 0.0f, 0.0f);
+        this.transform.Translate(0.0005f, 0.0f, 0.0f);
     }
 
 

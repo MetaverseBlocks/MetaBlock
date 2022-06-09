@@ -45,7 +45,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        cc = GetComponent<CharacterController>();
+     //   cc = GetComponent<CharacterController>();
         currentSpeed = walkSpeed;
     }
    
@@ -79,7 +79,7 @@ public class PlayerMove : MonoBehaviour
 
         // Move CharController. 
         // .Move will not apply gravity, use SimpleMove if you want gravity.
-        cc.Move(moveDir * currentSpeed * Time.deltaTime);
+        //cc.Move(moveDir * currentSpeed * Time.deltaTime);
 
       //if (Input.GetKey(KeyCode.U))
       //      transform.Translate(Vector3.up * currentSpeed/10);
