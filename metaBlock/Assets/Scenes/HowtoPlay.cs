@@ -16,7 +16,7 @@ public class HowtoPlay : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
                 break;
             case "startbtn":
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("PlayRoom");
                 break;
          
         }

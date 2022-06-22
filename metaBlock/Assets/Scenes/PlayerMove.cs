@@ -43,6 +43,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private GameObject playerCamera; // Player cam, set in editor.
 
+    public GameObject LeapMotion;
+
     private void Start()
     {
      //   cc = GetComponent<CharacterController>();
@@ -63,9 +65,14 @@ public class PlayerMove : MonoBehaviour
 
         // Adjust rotation of camera and player's body.
         // Rotate the camera on its X axis for up / down camera movement.
-        playerCamera.transform.localEulerAngles = new Vector3(mY, 0f, 0f);
+        //playerCamera.transform.localEulerAngles = new Vector3(mY, 0f, 0f);
+        LeapMotion.transform.localEulerAngles = new Vector3(mY, 0f, 0f);
+
+        //LeapMotion.transform.Translate(0f, mY, 0f);
+
         // Rotate the player's body on its Y axis for left / right camera movement.
         transform.eulerAngles = new Vector3(0f, mX, 0f);
+     
 
         // Get Hor and Ver input.
         float hor = Input.GetAxis("Horizontal");
