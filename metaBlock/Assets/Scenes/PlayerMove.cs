@@ -50,11 +50,11 @@ public class PlayerMove : MonoBehaviour
      //   cc = GetComponent<CharacterController>();
         currentSpeed = walkSpeed;
     }
-   
+
     private void LateUpdate()
     {
+        /*
 
-   
 
         // Get mouse axis.
         mX += Input.GetAxis("Mouse X") * rotSpeedX * (Time.deltaTime * rotDamp);
@@ -65,14 +65,9 @@ public class PlayerMove : MonoBehaviour
 
         // Adjust rotation of camera and player's body.
         // Rotate the camera on its X axis for up / down camera movement.
-        //playerCamera.transform.localEulerAngles = new Vector3(mY, 0f, 0f);
-        LeapMotion.transform.localEulerAngles = new Vector3(mY, 0f, 0f);
-
-        //LeapMotion.transform.Translate(0f, mY, 0f);
-
+        playerCamera.transform.localEulerAngles = new Vector3(mY, 0f, 0f);
         // Rotate the player's body on its Y axis for left / right camera movement.
         transform.eulerAngles = new Vector3(0f, mX, 0f);
-     
 
         // Get Hor and Ver input.
         float hor = Input.GetAxis("Horizontal");
@@ -80,22 +75,66 @@ public class PlayerMove : MonoBehaviour
 
         // Set speed to walk speed.
         currentSpeed = walkSpeed;
-     
+
         // Get new move position based off input.
         Vector3 moveDir = (transform.right * hor) + (transform.forward * ver);
 
         // Move CharController. 
         // .Move will not apply gravity, use SimpleMove if you want gravity.
         //cc.Move(moveDir * currentSpeed * Time.deltaTime);
+        */
 
-      //if (Input.GetKey(KeyCode.U))
-      //      transform.Translate(Vector3.up * currentSpeed/10);
-       
-      //  if (Input.GetKey(KeyCode.D))
-      //      transform.Translate(Vector3.down * currentSpeed/10);
+        currentSpeed = walkSpeed;
+
+
+        if (Input.GetKey(KeyCode.U))
+            transform.Translate(Vector3.up * currentSpeed / 20);
+
+        if (Input.GetKey(KeyCode.D))
+            transform.Translate(Vector3.down * currentSpeed / 20);
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+            transform.Translate(Vector3.left * currentSpeed / 20);
+
+        if (Input.GetKey(KeyCode.RightArrow))
+            transform.Translate(Vector3.right * currentSpeed / 20);
+
+        if (Input.GetKey(KeyCode.UpArrow))
+            transform.Translate(Vector3.forward * currentSpeed / 20);
+
+        if (Input.GetKey(KeyCode.DownArrow))
+            transform.Translate(Vector3.back * currentSpeed / 20);
+
+        /*
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (CollisionDetector.data_stream.IsOpen)
+            {
+                CollisionDetector.data_stream.Close();
+                Debug.Log("시리얼닫기");
+            }
+            else
+            {
+                Debug.Log("시리얼안열려있음");
+            }
+        }
+
+        if (Input.GetKey(KeyCode.O))
+        {
+            if (CollisionDetector.data_stream.IsOpen)
+            {
+                Debug.Log("시리얼열려있음");
+            }
+            else
+            {
+                CollisionDetector.data_stream.Open();
+                Debug.Log("시리얼열기");
+            }
+
+        }*/
 
     }
-   
 
 
 

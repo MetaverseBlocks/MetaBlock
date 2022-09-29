@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -4960968434639324853}
   - component: {fileID: 4171586197145665234}
   - component: {fileID: 3320062664039017813}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: dropBlock
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4453156295883136052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 103c8a1937d197c4cb89a4766904a36e, type: 2}
+  - {fileID: 2100000, guid: c68b9effc9c2e6b4b9e366b1da78421e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,9 +155,9 @@ MonoBehaviour:
   graspedMovementType: 0
   _overrideInteractionLayer: 0
   _interactionLayer:
-    layerIndex: 0
+    layerIndex: 10
   _overrideNoContactLayer: 0
   _noContactLayer:
-    layerIndex: 0
+    layerIndex: 11
   _eventTable:
     _entries: []
