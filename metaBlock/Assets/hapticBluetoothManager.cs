@@ -8,7 +8,7 @@ public class hapticBluetoothManager : MonoBehaviour
 {
 
 	static BluetoothHelper bluetoothHelper;
-	string deviceName = "PASTTA";
+	string deviceName = "PASTA";
 
 	static string send_message;
 	string received_message;
