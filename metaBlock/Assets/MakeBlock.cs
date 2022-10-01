@@ -10,6 +10,7 @@ public class MakeBlock : MonoBehaviour
     public GameObject block;
     public GameObject player;
 
+
     //public Material[] materials;
     public Material material;
 

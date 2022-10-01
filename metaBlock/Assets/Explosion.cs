@@ -12,9 +12,10 @@ public class Explosion : MonoBehaviour
     Vector3 cubesPivot;
 
     Material[] materials;
-    public int materialCnt=7;
+    public int materialCnt=10;
     int createCnt = 0;
-
+   
+    public AudioSource audioSource;
     public float explosionForce = 50f;
     public float explosionRadius = 4f;
     public float explosionUpward = 0.4f;
@@ -28,7 +29,14 @@ public class Explosion : MonoBehaviour
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
+        
+    }
 
+  //  float forceGravity = 50000f;
+    private void FixedUpdate()
+    {
+       // GetComponent < Rigidbody>().AddForce(Vector3.down * forceGravity);
+      
     }
 
     // Update is called once per frame
@@ -41,6 +49,8 @@ public class Explosion : MonoBehaviour
     {
         if (other.gameObject.name == "Floor")
         {
+            audioSource.Play();
+
             explode();
         }
 
@@ -50,6 +60,7 @@ public class Explosion : MonoBehaviour
     {
         //make object disappear
         gameObject.SetActive(false);
+       
 
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++)
@@ -78,6 +89,7 @@ public class Explosion : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
             }
         }
+
 
     }
 
