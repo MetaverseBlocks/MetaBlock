@@ -19,11 +19,13 @@ public class MakeBlock : MonoBehaviour
     public void clickModeOn()
     {
         clickMode = true;
+        Debug.Log("°ËÁö¸¸ ÆîÃÄÁü");
     }
 
     public void clickModeOff()
     {
         clickMode = false;
+        Debug.Log("°ËÁö Á¢ÇöÁü");
     }
 
     public void makeBlockInSky()

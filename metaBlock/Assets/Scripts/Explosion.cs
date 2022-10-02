@@ -15,7 +15,9 @@ public class Explosion : MonoBehaviour
     public int materialCnt=10;
     int createCnt = 0;
    
-    public AudioSource audioSource;
+    private  AudioSource musicPlayer;
+   // public AudioClip clip;
+
     public float explosionForce = 50f;
     public float explosionRadius = 4f;
     public float explosionUpward = 0.4f;
@@ -24,6 +26,8 @@ public class Explosion : MonoBehaviour
     void Start()
     {
         materials = GetComponent<Renderer>().materials;
+        musicPlayer = GetComponent<AudioSource>();
+
 
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
@@ -49,7 +53,7 @@ public class Explosion : MonoBehaviour
     {
         if (other.gameObject.name == "Floor")
         {
-            audioSource.Play();
+            //playSound(clip, musicPlayer);
 
             explode();
         }
@@ -113,6 +117,15 @@ public class Explosion : MonoBehaviour
         piece.GetComponent<Rigidbody>().mass = cubeSize;
 
         createCnt++;
+    }
+
+    public static void playSound(AudioClip clip,AudioSource audioPlayer)
+    {
+        Debug.Log("오디오 나온다고");
+        audioPlayer.Stop();
+        audioPlayer.clip = clip;
+        audioPlayer.time = 0;
+        audioPlayer.Play();
     }
 
 }

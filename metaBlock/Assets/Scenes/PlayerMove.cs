@@ -27,8 +27,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float rotDamp; // Damping value for camera rotation.
 
-    private float mY = 0f; // Mouse X.
-    private float mX = 0f; // Mouse Y.
+    //private float mY = 0f; // Mouse X.
+    //private float mX = 0f; // Mouse Y.
 
 
     // Player move variables.

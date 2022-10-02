@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
+using System;
 using ArduinoBluetoothAPI;
 
-public class hapticBluetoothManager : MonoBehaviour
+public class gloveBluetoothManager : MonoBehaviour
 {
 
+	// Use this for initialization
 	static BluetoothHelper bluetoothHelper;
 	string deviceName = "PASTA";
 
-	static string send_message;
 	string received_message;
+	static string send_message;
 	static Boolean reconnect = false;
 
+	// Start is called before the first frame update
 	void Start()
 	{
+
 		try
 		{
 			BluetoothHelper.BLE = false;
@@ -41,6 +44,7 @@ public class hapticBluetoothManager : MonoBehaviour
 			Debug.Log(ex.Message);
 
 		}
+
 	}
 
 	// Update is called once per frame
@@ -49,10 +53,9 @@ public class hapticBluetoothManager : MonoBehaviour
 
 	}
 
-
 	public static void sendData(string str)
 	{
-		Debug.Log("sendData func call");
+		//Debug.Log("sendfunc call");
 		send_message = str;
 		if (bluetoothHelper.isConnected())
 		{
@@ -60,36 +63,66 @@ public class hapticBluetoothManager : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("연결 안 되어있음");
 			reconnect = true;
 			bluetoothHelper.Connect(); // tries to connect
 		}
 
 	}
 
+	void OnMessageReceived()
+	{
+		received_message = bluetoothHelper.Read();
+		//Debug.Log(received_message);
+		if (received_message.Contains("G"))
+		{
+			Debug.Log("Grapping Block Motion");
+		}
+
+	}
 
 	void OnConnected()
 	{
 		try
 		{
 			bluetoothHelper.StartListening();
-			Debug.Log("HAPTIC Bluetooth Connected");
+			Debug.Log("glove Bluetooth Connected");
 
 			if (reconnect == true)
 			{
-				Debug.Log(send_message+"reconnect후 send");
 				bluetoothHelper.SendData(send_message);
 				reconnect = false;
 			}
 		}
 		catch (Exception ex)
 		{
-			Debug.Log("haptic Bluetooth ConnectedFail");
 			Debug.Log(ex.Message);
 		}
 
+
+
 	}
 
+	/*
+
+	void OnGUI()
+	{
+
+		if (isDebugOn)
+		{
+			if (bluetoothHelper != null)
+				bluetoothHelper.DrawGUI();
+			else
+				return;
+
+			// Screen Debug
+			GUIStyle myStyle = new GUIStyle();
+			myStyle.fontSize = 18;
+			myStyle.normal.textColor = Color.blue;
+			GUI.Label(new Rect(10, 10, 1080, 1920), myLog, myStyle);
+		}
+	}
+
+	*/
 
 	void OnScanEnded(BluetoothHelper helper, LinkedList<BluetoothDevice> devices)
 	{
@@ -103,8 +136,9 @@ public class hapticBluetoothManager : MonoBehaviour
 
 	void OnConnectionFailed()
 	{
-		Debug.Log("haptic Bluetooth ConnectedFail");
+		//Debug.Log("Connection Failed");
 	}
+
 
 	void OnDestroy()
 	{
@@ -119,10 +153,48 @@ public class hapticBluetoothManager : MonoBehaviour
 			bluetoothHelper.Disconnect();
 	}
 
-	void OnMessageReceived()
-	{
-		received_message = bluetoothHelper.Read();
-		Debug.Log(received_message);
+	/*
 
+	// Screen Debug
+	bool isDebugOn = true;
+	string myLog;
+	Queue myLogQueue = new Queue();
+
+	void OnEnable()
+	{
+		Application.logMessageReceived += HandleLog;
 	}
+	void OnDisable()
+	{
+		Application.logMessageReceived -= HandleLog;
+	}
+
+	void HandleLog(string logString, string stackTrace, LogType type)
+	{
+
+		if (myLogQueue.Count > 4)
+		{
+			myLogQueue.Clear();
+		}
+
+		myLog = logString;
+		//	string newString = "[" + type + "] : " + myLog + "\n";
+
+		string newString = "# " + myLog + "\n";
+
+		myLogQueue.Enqueue(newString);
+		if (type == LogType.Exception)
+		{
+			newString = "\n" + stackTrace;
+			myLogQueue.Enqueue(newString);
+		}
+		myLog = string.Empty;
+		foreach (string mylog in myLogQueue)
+		{
+			myLog += mylog;
+		}
+	}
+
+	*/
 }
+

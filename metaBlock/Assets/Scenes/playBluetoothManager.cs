@@ -9,11 +9,10 @@ public class playBluetoothManager : MonoBehaviour
 
     // Use this for initialization
     static BluetoothHelper bluetoothHelper;
-    string deviceName="HC";
+    string deviceName="Haptic";
 
     string received_message;
-	static string send_message;
-    static Boolean reconnect = false;
+   // static Boolean reconnect = false;
 
 	[SerializeField]
 	public GameObject player;
@@ -62,7 +61,7 @@ public class playBluetoothManager : MonoBehaviour
 	void OnMessageReceived()
 	{
 		received_message = bluetoothHelper.Read();
-		Debug.Log(received_message);
+		//Debug.Log(received_message);
 
         
 
@@ -97,13 +96,8 @@ public class playBluetoothManager : MonoBehaviour
 		try
 		{		
 			bluetoothHelper.StartListening();
-			Debug.Log("PASTA Bluetooth Connected");
+			Debug.Log("player Bluetooth Connected");
 
-			if (reconnect == true)
-			{
-				bluetoothHelper.SendData(send_message);
-				reconnect = false;
-			}
 		}
 		catch (Exception ex)
 		{
