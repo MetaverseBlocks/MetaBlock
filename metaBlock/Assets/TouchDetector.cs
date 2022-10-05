@@ -20,7 +20,7 @@ public class TouchDetector : MonoBehaviour
           
             check = false;
             //Debug.Log("ÆÈ·¹Æ® collision enter");
-            gloveBluetoothManager.sendData("2");
+            //gloveBluetoothManager.sendData("2");
             StartCoroutine(WaitForIt());
             makeBlockInSky(c.gameObject.GetComponent<Renderer>().material);
 
@@ -49,7 +49,7 @@ public class TouchDetector : MonoBehaviour
 
             installPos.y += 2;
             installPos.z += (float)rand.NextDouble() * (4 - 2) + 2;
-            installPos.x -= (float)rand.NextDouble() * (2 - 0.2f) - 0.4f;
+            installPos.x -= (float)rand.NextDouble() * (2 - 0.2f) + 0.2f;
 
             Renderer rend = block.GetComponent<Renderer>();
             rend.enabled = true;

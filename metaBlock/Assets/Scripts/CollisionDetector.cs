@@ -26,7 +26,7 @@ public class CollisionDetector : MonoBehaviour
             //주먹을 쥔 상태에서 블록과 충돌중 -> 이미 블록을 잡은 상태
             if (ExtendedFingerInfo.fistGesture == true)
             {
-                Debug.Log("블록 잡고 움직이는 중");
+                Debug.Log("holding the block and moving");
             }
 
             if (hand == "L" && fingerNum == 1 && check)
