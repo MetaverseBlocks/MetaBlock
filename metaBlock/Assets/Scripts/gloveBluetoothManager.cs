@@ -47,12 +47,6 @@ public class gloveBluetoothManager : MonoBehaviour
 
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-
-	}
-
 	public static void sendData(string str)
 	{
 		//Debug.Log("sendfunc call");

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
+using TMPro;
 
 public class TouchDetector : MonoBehaviour
 {
@@ -9,18 +10,22 @@ public class TouchDetector : MonoBehaviour
     //private Vector3 installPos;
     public GameObject block;
     public GameObject player;
-    private bool check = true; 
+    private bool check = true;
+
+    public TextMeshProUGUI resourceText;
 
     private void OnCollisionEnter(Collision c)
     {
 
-        if (c.gameObject.CompareTag("palette")&&check&& ExtendedFingerInfo.clickGuesture)  
-            //검지만 펼쳐진 클릭제스쳐이고 팔레트에 터치되었고 1.0f초 기다림이 끝난 상태일 때
+        if (c.gameObject.CompareTag("palette")&&
+            check&& ExtendedFingerInfo.clickGuesture)  
+            //검지만 펼쳐진 클릭제스쳐이고 팔레트에 터치되었고
+            //1.0f초 기다림이 끝난 상태일 때
         {
           
             check = false;
-            //Debug.Log("팔레트 collision enter");
-            //gloveBluetoothManager.sendData("2");
+            Debug.Log("팔레트 collision enter");
+            gloveBluetoothManager.sendData("2");
             StartCoroutine(WaitForIt());
             makeBlockInSky(c.gameObject.GetComponent<Renderer>().material);
 
@@ -33,7 +38,6 @@ public class TouchDetector : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         check = true;
     }
-
 
 
     void makeBlockInSky(Material material)
