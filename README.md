@@ -133,7 +133,7 @@
 
 [**[YouTube] <span style="font-size:89%">haptic을 활용한 메타버스 실감교육 플랫폼 '메타블록' </span>**](https://www.youtube.com/watch?v=PJec90oPHjQ)
 <br>
-[![Thumbnail](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/blocks.gif)](https://www.youtube.com/watch?v=PJec90oPHjQ)
+[![Thumbnail](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/metablock%20intro.gif)](https://www.youtube.com/watch?v=PJec90oPHjQ)
 <br>
 <br>
 
