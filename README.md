@@ -31,9 +31,13 @@
 - H/W 
     - device : Leap Motion, Haptic Glove, Moving Controller
     - equipment : felx sensor, vibration motor, servo motor, joy stick, switch button 
-    - communication : HC-06 Bluetooth 
+    - communication : HC-06 Bluetooth
+<details>
+<summary>Diagram view</summary>
+
 ![구성도](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/system.png)
 
+</details>
 
 ### 🧑‍🤝‍🧑 맴버 구성
  - 팀장  : 박지연 - 손 제스쳐 인식, 블록생성,  블록놀이, 립모션 연결, 블루투스 통신
