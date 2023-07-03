@@ -2,7 +2,7 @@
 *haptic을 활용한 메타버스 실감교육 플랫폼 '메타블록'*
 <br>
 <br>
-![메타블록](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/metablock%20meaning_resize.jpg)
+![메타블록](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/metablock%20meaning_resize2.jpg)
 <br>
 <br>
 
