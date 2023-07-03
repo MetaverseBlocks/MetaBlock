@@ -65,11 +65,12 @@
     - 블록놓은 순간 : left/right hand put down the block
     - 블록잡은 순간 : grabbing the block
 <details>
-<summary>Image 📷</summary>
+<summary>이미지 보기</summary>
   
 ![프로젝트#1](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81%EB%B2%88%EC%82%AC%EC%A7%84.png)
   
 </details>
+<br>
 
 #### 블록생성
 - 팔레트 펼치기
@@ -85,7 +86,7 @@
     - 손가락별 충돌 감지
     - 햅틱 디바이스 작동 신호 전송
 <details>
-<summary>Image 📷</summary>
+<summary>이미지 보기</summary>
   
 ![프로젝트#2](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B82%EB%B2%88%EC%82%AC%EC%A7%84.png)
   
@@ -112,7 +113,7 @@
     - 하드웨어 스위치버튼 조작
     - 메타버스상 사용자 시야 움직임
 <details>
-<summary>Image 📷</summary>
+<summary>이미지 보기</summary>
   
 ![프로젝트#3](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B83%EB%B2%88%EC%82%AC%EC%A7%84.png)
   
