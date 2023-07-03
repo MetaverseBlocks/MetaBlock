@@ -165,7 +165,7 @@
 
 ### 🗂️프로젝트 포스터
 <details>
-<summary>Poster view</summary>
+<summary>포스터 보기</summary>
   
 ![포스터](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/metablock%20poster.jpg)
   
