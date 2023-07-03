@@ -146,7 +146,7 @@
 ## 🏆 수상 실적
 **2022 이브와 ICT 멘토링 공모전 동상 수상**
 <br>
-[[영남대 학과소식] <span style="font-size:80%">박지연, 나유경, 오은아, 이경주, 전인서 학생 ‘2022 이브와 ICT 멘토링 공모전’ IT여성기업인협회장상 (동상) 수상</span>](https://www.yu.ac.kr/cse/community/news.do?mode=view&articleNo=5372806&article.offset=0&articleLimit=10)
+[[영남대 학과소식] <span style="font-size:80%">박지연,나유경,오은아,이경주,전인서 학생 ‘2022 이브와 ICT 멘토링 공모전’ IT여성기업인협회장상 (동상) 수상</span>](https://www.yu.ac.kr/cse/community/news.do?mode=view&articleNo=5372806&article.offset=0&articleLimit=10)
 <br>
 [[SEN 서울경제TV] <span style="font-size:80%">영남대 컴퓨터공학과, 주요 공모전 휩쓸며 전공 역량 공인</span>](https://m.sentv.co.kr/news/view/648671)
 <br>
