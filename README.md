@@ -33,7 +33,7 @@
     - equipment : felx sensor, vibration motor, servo motor, joy stick, switch button 
     - communication : HC-06 Bluetooth
 <details>
-<summary>Diagram view</summary>
+<summary>Develop Diagram</summary>
 
 ![구성도](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/system.png)
 
@@ -54,6 +54,13 @@
 
 ### **#A. 메타블록**
 #### 사용자 손 제스쳐 인식 
+<details>
+<summary>이미지 보기🔎</summary>
+  
+![프로젝트#1](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81%EB%B2%88%EC%82%AC%EC%A7%84.png)
+  
+</details>
+
 - *Ultraleap SDK* 활용 🔗[UnityPlugin-github](https://github.com/ultraleap/UnityPlugin) 
 - 클릭 제스쳐
     - 검지 손가락만 펼치고 나머지 손가락은 접은 모션
@@ -64,12 +71,6 @@
     - 블록잡고 이동 : holding the block and moving
     - 블록놓은 순간 : left/right hand put down the block
     - 블록잡은 순간 : grabbing the block
-<details>
-<summary>이미지 보기</summary>
-  
-![프로젝트#1](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81%EB%B2%88%EC%82%AC%EC%A7%84.png)
-  
-</details>
 <br>
 
 #### 블록생성
@@ -86,7 +87,7 @@
     - 손가락별 충돌 감지
     - 햅틱 디바이스 작동 신호 전송
 <details>
-<summary>이미지 보기</summary>
+<summary>이미지 보기🔎</summary>
   
 ![프로젝트#2](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B82%EB%B2%88%EC%82%AC%EC%A7%84.png)
   
@@ -113,7 +114,7 @@
     - 하드웨어 스위치버튼 조작
     - 메타버스상 사용자 시야 움직임
 <details>
-<summary>이미지 보기</summary>
+<summary>이미지 보기🔎</summary>
   
 ![프로젝트#3](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B83%EB%B2%88%EC%82%AC%EC%A7%84.png)
   
@@ -165,7 +166,7 @@
 
 ### 🗂️프로젝트 포스터
 <details>
-<summary>포스터 보기</summary>
+<summary>포스터 보기🔎</summary>
   
 ![포스터](https://github.com/MetaverseBlocks/MetaBlock/blob/main/images/metablock%20poster.jpg)
   
